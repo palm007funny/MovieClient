@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://serverpack/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://serverpack/">
+
+<xs:element name="DeleteMovie" type="tns:DeleteMovie"/>
+
+<xs:element name="DeleteMovieResponse" type="tns:DeleteMovieResponse"/>
+
+<xs:element name="Edit" type="tns:Edit"/>
+
+<xs:element name="EditResponse" type="tns:EditResponse"/>
+
+<xs:element name="Exception" type="tns:Exception"/>
+
+<xs:element name="Save" type="tns:Save"/>
+
+<xs:element name="SaveResponse" type="tns:SaveResponse"/>
+
+<xs:element name="addMovie" type="tns:addMovie"/>
+
+<xs:element name="addMovieResponse" type="tns:addMovieResponse"/>
+
+<xs:element name="searchQue1" type="tns:searchQue1"/>
+
+<xs:element name="searchQue1Response" type="tns:searchQue1Response"/>
+
+<xs:element name="searchQue2" type="tns:searchQue2"/>
+
+<xs:element name="searchQue2Response" type="tns:searchQue2Response"/>
+
+<xs:element name="serchbyID" type="tns:serchbyID"/>
+
+<xs:element name="serchbyIDResponse" type="tns:serchbyIDResponse"/>
+
+<xs:complexType name="searchQue1">
+<xs:sequence>
+<xs:element name="category" type="xs:string" minOccurs="0"/>
+<xs:element name="search" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchQue1Response">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchQue2">
+<xs:sequence>
+<xs:element name="category" type="xs:string" minOccurs="0"/>
+<xs:element name="conditon" type="xs:string" minOccurs="0"/>
+<xs:element name="firstNum" type="xs:int"/>
+<xs:element name="secondNum" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchQue2Response">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Edit">
+<xs:sequence>
+<xs:element name="nodeID" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EditResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Save">
+<xs:sequence>
+<xs:element name="nodeID" type="xs:int"/>
+<xs:element name="title" type="xs:string" minOccurs="0"/>
+<xs:element name="year" type="xs:string" minOccurs="0"/>
+<xs:element name="types" type="xs:string" minOccurs="0"/>
+<xs:element name="time" type="xs:string" minOccurs="0"/>
+<xs:element name="director" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SaveResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="DeleteMovie">
+<xs:sequence>
+<xs:element name="nodeID" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="DeleteMovieResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addMovie">
+<xs:sequence>
+<xs:element name="title" type="xs:string" minOccurs="0"/>
+<xs:element name="year" type="xs:string" minOccurs="0"/>
+<xs:element name="types" type="xs:string" minOccurs="0"/>
+<xs:element name="time" type="xs:int"/>
+<xs:element name="director" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addMovieResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="serchbyID">
+<xs:sequence>
+<xs:element name="nodeID" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="serchbyIDResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
